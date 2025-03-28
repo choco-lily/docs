@@ -24,6 +24,17 @@ export default defineConfig({
                     autogenerate: { directory: 'reference' },
                 },
             ],
+            head: [
+    // Example: add Fathom analytics script tag.
+    {
+      tag: 'script',
+      attrs: {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2420658305303725',
+        'crossorigin': 'anonymous',
+        defer: true,
+      },
+    },
+  ],
         }),
     ],
 });
