@@ -43,7 +43,7 @@ export default defineConfig({
                         {
                             label: "문서",
                             translations: { en: "Docs" },
-                            link: "/chocolily",
+                            link: "/maplestory/boss",
                         },
                     ],
                 },
