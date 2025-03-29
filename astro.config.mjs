@@ -1,44 +1,88 @@
 // @ts-check
-import {
-    defineConfig
-} from 'astro/config';
-import starlight from '@astrojs/starlight';
+import { defineConfig } from "astro/config"
+import starlight from "@astrojs/starlight"
+import starlightUtils from "@lorenzo_lewis/starlight-utils"
 
 // https://astro.build/config
 export default defineConfig({
     integrations: [
         starlight({
-            title: 'chocolily',
-            social: {
-                twitter: 'https://x.com/Choco_Lily__',
-                github: 'https://github.com/choco-lily/chocolily.dev',
+            title: {
+                ko: "쵸코릴리",
+                en: "chocolily",
             },
-            sidebar: [{
-                    label: 'Guides',
+            locales: {
+                root: {
+                    label: "한국어",
+                    lang: "ko",
+                },
+                en: {
+                    label: "English",
+                },
+            },
+            plugins: [
+                starlightUtils({
+                    navLinks: {
+                        leading: { useSidebarLabelled: "leadingNavLinks" },
+                    },
+                }),
+            ],
+            social: {
+                twitter: "https://x.com/Choco_Lily__",
+                github: "https://github.com/choco-lily/chocolily.dev",
+            },
+            sidebar: [
+                {
+                    label: "leadingNavLinks",
                     items: [
-                        // Each item here is one entry in the navigation menu.
                         {
-                            label: 'Example Guide',
-                            slug: 'guides/example'
+                            label: "블로그",
+                            translations: { en: "Blog" },
+                            link: "https://blog.chocolily.dev",
+                        },
+                        {
+                            label: "문서",
+                            translations: { en: "Docs" },
+                            link: "/chocolily",
                         },
                     ],
                 },
                 {
-                    label: 'Reference',
+                    label: "쵸코릴리",
+                    translations: {
+                        en: "chocolily",
+                    },
                     autogenerate: {
-                        directory: 'reference'
+                        directory: "chocolily",
+                    },
+                },
+                {
+                    label: "메이플스토리",
+                    translations: {
+                        en: "MapleStory",
+                    },
+                    autogenerate: {
+                        directory: "MapleStory",
                     },
                 },
             ],
-            head: [{
-                tag: 'script',
-                attrs: {
-                    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2420658305303725',
-                    crossorigin: 'anonymous',
-                    async: true,
+            head: [
+                {
+                    tag: "script",
+                    attrs: {
+                        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2420658305303725",
+                        crossorigin: "anonymous",
+                        async: true,
+                    },
                 },
-            }, ],
-            customCss: ['./src/styles/custom.css'],
+                {
+                    tag: "script",
+                    attrs: {
+                        src: "../..//custom.js",
+                    }
+                }
+            ],
+            customCss: ["./src/styles/custom.css"],
         }),
     ],
-});
+})

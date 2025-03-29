@@ -1,37 +1,33 @@
 {
-  "name": "chocolily.dev",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
+    "name": "chocolily.dev",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro",
         "prettier": "prettier --write ."
-  },
-  "dependencies": {
-    "@astrojs/starlight": "^0.32.5",
-    "astro": "^5.5.3",
-    "prettier": "^3.5.3",
-    "sharp": "^0.32.5"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": false,
-    "tabWidth": 4,
-    "plugins": [
-      "prettier-plugin-astro",
-      "prettier-plugin-tailwindcss",
-      "prettier-plugin-astro-organize-imports"
-    ],
-    "overrides": [
-      {
-        "files": "*.astro",
-        "options": {
-          "parser": "astro"
-        }
-      }
-    ]
-  }
+    },
+    "dependencies": {
+        "@astrojs/starlight": "^0.32.5",
+        "@lorenzo_lewis/starlight-utils": "^0.3.2",
+        "astro": "^5.5.3",
+        "prettier-plugin-astro": "^0.14.1",
+        "sharp": "^0.32.5"
+    },
+    "prettier": {
+        "semi": false,
+        "singleQuote": false,
+        "tabWidth": 4,
+        "overrides": [
+            {
+                "files": "*.astro",
+                "options": {
+                    "parser": "astro"
+                }
+            }
+        ]
+    }
 }
