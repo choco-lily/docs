@@ -3,6 +3,21 @@ title: 보스
 description: 보스 기록.
 ---
 
+import { Image } from "astro:assets";
+
+import normalLotus from "src/images/boss/normal_lotus.webp";
+import normalDamien from "src/images/boss/normal_damien.webp";
+import normalGuardianAngelSlime from "src/images/boss/normal_guardian_angel_slime.webp";
+
+import chaosGuardianAngelSlime from "src/images/boss/chaos_guardian_angel_slime.webp";
+
+import hardLotus from "src/images/boss/hard_lotus.webp";
+import hardDamien from "src/images/boss/hard_damien.webp";
+import hardWill from "src/images/boss/hard_will.webp";
+import hardVerusHilla from "src/images/boss/hard_verus_hilla.webp";
+
+import blackHeart from "src/images/boss/black_heart.webp";
+
 export const maple = (n) => {
     return (
         <a
@@ -23,38 +38,39 @@ export const maple = (n) => {
 #### 노멀
 
 2021년 6월 9일
+<Image src={normalLotus} loading="eager" alt="노멀 스우" />
 
 #### 하드
 
 2024년 6월 13일\
 캐릭터: {maple("천학이")}
-![하드 스우](https://cdn.chocolily.dev/boss/hard_lotus.webp)
+<Image src={hardLotus} loading="eager" alt="하드 스우" />
 
 ### 데미안
 
 #### 노멀
 
 2021년 11월 18일
-![노멀 데미안](https://cdn.chocolily.dev/boss/normal_damien.webp)
+<Image src={normalDamien} alt="노멀 데미안" />
 
 #### 하드
 
 2024년 7월 28일\
 캐릭터: {maple("포니테일은월")}
-![하드 데미안](https://cdn.chocolily.dev/boss/hard_damien.webp)
+<Image src={hardDamien} alt="하드 데미안" />
 
 ### 가디언 엔젤 슬라임
 
 #### 노멀
 
 2022년 9월 1일
-![노멀 가디언 엔젤 슬라임](https://cdn.chocolily.dev/boss/normal_guardian_angel_slime.webp)
+<Image src={normalGuardianAngelSlime} alt="노멀 가디언 엔젤 슬라임" />
 
 #### 카오스
 
 2025년 3월 28일\
 캐릭터: {maple("쵸코릴리")}
-![카오스 가디언 엔젤 슬라임](https://cdn.chocolily.dev/boss/chaos_guardian_angel_slime.webp)
+<Image src={chaosGuardianAngelSlime} alt="카오스 가디언 엔젤 슬라임" />
 
 ### 윌
 
@@ -62,14 +78,18 @@ export const maple = (n) => {
 
 2025년 3월 28일\
 캐릭터: {maple("쵸코릴리")}
-![하드 윌](https://cdn.chocolily.dev/boss/hard_will.webp)
+<Image src={hardWill} alt="하드 윌" />
 
 ### 진 힐라
+#### 노멀
+2024년 10월 2일\
+캐릭터: {maple("포니테일은월")}
 
 #### 하드
 
 2025년 3월 29일\
 캐릭터: {maple("쵸코릴리")}
+<Image src={hardVerusHilla} alt="하드 진 힐라" />
 
 ## 물욕템
 
@@ -77,4 +97,4 @@ export const maple = (n) => {
 
 2024년 7월 18일\
 캐릭터: {maple("포니테일은월")}
-![블랙 하트](https://cdn.chocolily.dev/boss/black_heart.webp)
+<Image src={blackHeart} alt="블랙 하트" />
