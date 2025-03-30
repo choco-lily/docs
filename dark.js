@@ -9,6 +9,7 @@ console.log(data)
 
 var newValue = data.replace("false, value: 'd", "true, value: 'd")
 newValue = newValue.replace("true, value: 'a", "false, value: 'a")
+newValue = newValue.replace("theme : 'auto'", "theme : 'dark'")
 
 fs.writeFileSync(
     "./node_modules/@astrojs/starlight/components/ThemeSelect.astro",
@@ -16,4 +17,4 @@ fs.writeFileSync(
     "utf-8",
 )
 
-console.log("change default mode to dark mode success")
+console.log("now default mode is dark!")

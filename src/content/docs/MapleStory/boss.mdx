@@ -3,20 +3,28 @@ title: 보스
 description: 보스 기록.
 ---
 
-import { Image } from "astro:assets";
+import { Image } from "astro:assets"
 
-import normalLotus from "src/images/boss/normal_lotus.webp";
-import normalDamien from "src/images/boss/normal_damien.webp";
-import normalGuardianAngelSlime from "src/images/boss/normal_guardian_angel_slime.webp";
+import normalLotus from "src/images/boss/normal_lotus.webp"
+import normalDamien from "src/images/boss/normal_damien.webp"
+import normalGuardianAngelSlime from "src/images/boss/normal_guardianAngelSlime.webp"
+import normalDusk from "src/images/boss/normal_dusk.webp"
+import normalDarknell from "src/images/boss/normal_darknell.webp"
+import normalVerusHilla from "src/images/boss/normal_verusHilla.webp"
 
-import chaosGuardianAngelSlime from "src/images/boss/chaos_guardian_angel_slime.webp";
+import chaosGuardianAngelSlime from "src/images/boss/chaos_guardianAngelSlime.webp"
+import chaosDusk from "src/images/boss/chaos_dusk.webp"
 
-import hardLotus from "src/images/boss/hard_lotus.webp";
-import hardDamien from "src/images/boss/hard_damien.webp";
-import hardWill from "src/images/boss/hard_will.webp";
-import hardVerusHilla from "src/images/boss/hard_verus_hilla.webp";
+import hardLotus from "src/images/boss/hard_lotus.webp"
+import hardDamien from "src/images/boss/hard_damien.webp"
+import hardWill from "src/images/boss/hard_will.webp"
+import hardDarknell from "src/images/boss/hard_darknell.webp"
+import hardVerusHilla from "src/images/boss/hard_verusHilla.webp"
 
-import blackHeart from "src/images/boss/black_heart.webp";
+import kaiserium from "src/images/boss/kaiserium.webp"
+import guardianAngelRing from "src/images/boss/guardianAngelRing.webp"
+import estellaEarrings from "src/images/boss/estellaEarrings.webp"
+import blackHeart from "src/images/boss/blackHeart.webp"
 
 export const maple = (n) => {
     return (
@@ -38,12 +46,14 @@ export const maple = (n) => {
 #### 노멀
 
 2021년 6월 9일
+
 <Image src={normalLotus} loading="eager" alt="노멀 스우" />
 
 #### 하드
 
 2024년 6월 13일\
 캐릭터: {maple("천학이")}
+
 <Image src={hardLotus} loading="eager" alt="하드 스우" />
 
 ### 데미안
@@ -51,12 +61,14 @@ export const maple = (n) => {
 #### 노멀
 
 2021년 11월 18일
+
 <Image src={normalDamien} alt="노멀 데미안" />
 
 #### 하드
 
 2024년 7월 28일\
 캐릭터: {maple("포니테일은월")}
+
 <Image src={hardDamien} alt="하드 데미안" />
 
 ### 가디언 엔젤 슬라임
@@ -64,12 +76,14 @@ export const maple = (n) => {
 #### 노멀
 
 2022년 9월 1일
+
 <Image src={normalGuardianAngelSlime} alt="노멀 가디언 엔젤 슬라임" />
 
 #### 카오스
 
 2025년 3월 28일\
 캐릭터: {maple("쵸코릴리")}
+
 <Image src={chaosGuardianAngelSlime} alt="카오스 가디언 엔젤 슬라임" />
 
 ### 윌
@@ -78,23 +92,71 @@ export const maple = (n) => {
 
 2025년 3월 28일\
 캐릭터: {maple("쵸코릴리")}
+
 <Image src={hardWill} alt="하드 윌" />
 
-### 진 힐라
+### 더스크
+
 #### 노멀
+
+2023년 8월 10일\
+캐릭터: {maple("천학이")}
+
+<Image src={normalDusk} alt="노멀 더스크" />
+
+#### 카오스
+
+2024년 8월 31일\
+캐릭터: {maple("포니테일은월")}
+
+<Image src={chaosDusk} alt="카오스 더스크" />
+
+### 듄켈
+#### 노멀
+2023년 8월 18일
+캐릭터: {maple("천학이")}
+<Image src={normalDarknell} alt="노멀 듄켈" />
+
+#### 하드
+2025년 2월 6일
+캐릭터: {maple("쵸코릴리")}
+<Image src={hardDarknell} alt="하드 듄켈" />
+
+### 진 힐라
+
+#### 노멀
+
 2024년 10월 2일\
 캐릭터: {maple("포니테일은월")}
+
+<Image src={normalVerusHilla} alt="노멀 진 힐라" />
 
 #### 하드
 
 2025년 3월 29일\
 캐릭터: {maple("쵸코릴리")}
+
 <Image src={hardVerusHilla} alt="하드 진 힐라" />
 
 ## 물욕템
+
+### 카이세리움
+2023년 6월 10일
+<Image src={kaiserium} alt="카이세리움" />
+
+### 가디언 엔젤 링
+2025년 3월 28일\
+캐릭터: {maple("쵸코릴리")}
+<Image src={guardianAngelRing} alt="가디언 엔젤 링" />
+
+### 에스텔라 이어링
+2023년 12월 18일\
+캐릭터: {maple("천학이")}
+<Image src={estellaEarrings} alt="에스텔라 이어링" />
 
 ### 블랙 하트
 
 2024년 7월 18일\
 캐릭터: {maple("포니테일은월")}
+
 <Image src={blackHeart} alt="블랙 하트" />
