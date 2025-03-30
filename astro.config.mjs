@@ -79,8 +79,15 @@ export default defineConfig({
                     tag: "script",
                     attrs: {
                         src: "../..//custom.js",
-                    }
-                }
+                    },
+                },
+                {
+                    tag: "meta",
+                    attrs: {
+                        name: "google-adsense-account",
+                        content: "ca-pub-2420658305303725",
+                    },
+                },
             ],
             customCss: ["./src/styles/custom.css"],
         }),
