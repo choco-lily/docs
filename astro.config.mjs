@@ -5,13 +5,23 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils"
 
 import cloudflare from "@astrojs/cloudflare"
 
+import auth from "auth-astro"
+
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
     integrations: [
+        auth({
+            injectEndpoints: false,
+        }),
         starlight({
             title: {
                 ko: "쵸코릴리",
                 en: "chocolily",
+            },
+            components: {
+                Search: "./src/components/starlight/Search.astro",
             },
             locales: {
                 root: {
@@ -93,8 +103,11 @@ export default defineConfig({
             ],
             customCss: ["./src/styles/custom.css"],
         }),
+        auth(),
     ],
 
     output: "server",
-    adapter: cloudflare(),
+    adapter: node({
+      mode: "middleware",
+    }),
 })
