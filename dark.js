@@ -9,7 +9,7 @@ console.log(data)
 
 var newValue = data.replace("false, value: 'd", "true, value: 'd")
 newValue = newValue.replace("true, value: 'a", "false, value: 'a")
-newValue = newValue.replace("theme : 'auto'", "theme : 'dark'")
+newValue = newValue.replace('value="auto"', 'value="dark"')
 
 fs.writeFileSync(
     "./node_modules/@astrojs/starlight/components/ThemeSelect.astro",
