@@ -5,6 +5,8 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils"
 
 import cloudflare from "@astrojs/cloudflare"
 
+import partytown from "@astrojs/partytown"
+
 // https://astro.build/config
 export default defineConfig({
     integrations: [
@@ -75,12 +77,13 @@ export default defineConfig({
                         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2420658305303725",
                         crossorigin: "anonymous",
                         async: true,
+                        type: "text/partytown",
                     },
                 },
                 {
                     tag: "script",
                     attrs: {
-                        src: "../..//custom.js",
+                        src: "../../custom.js",
                     },
                 },
                 {
@@ -93,6 +96,7 @@ export default defineConfig({
             ],
             customCss: ["./src/styles/custom.css"],
         }),
+        partytown(),
     ],
 
     output: "server",
