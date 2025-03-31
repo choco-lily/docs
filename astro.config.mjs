@@ -4,6 +4,9 @@ import starlight from "@astrojs/starlight"
 import starlightUtils from "@lorenzo_lewis/starlight-utils"
 
 import cloudflare from "@astrojs/cloudflare"
+
+import auth from "auth-astro"
+
 // https://astro.build/config
 export default defineConfig({
     integrations: [
@@ -92,8 +95,9 @@ export default defineConfig({
             ],
             customCss: ["./src/styles/custom.css"],
         }),
+        auth(),
     ],
 
     output: "server",
-    adapter: cloudflare({ imageService: "cloudflare" }),
+    adapter: cloudflare({ imageService: "compile" }),
 })
