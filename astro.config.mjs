@@ -4,17 +4,9 @@ import starlight from "@astrojs/starlight"
 import starlightUtils from "@lorenzo_lewis/starlight-utils"
 
 import cloudflare from "@astrojs/cloudflare"
-
-import auth from "auth-astro"
-
-import node from "@astrojs/node";
-
 // https://astro.build/config
 export default defineConfig({
     integrations: [
-        auth({
-            injectEndpoints: false,
-        }),
         starlight({
             title: {
                 ko: "쵸코릴리",
@@ -103,11 +95,8 @@ export default defineConfig({
             ],
             customCss: ["./src/styles/custom.css"],
         }),
-        auth(),
     ],
 
     output: "server",
-    adapter: node({
-      mode: "middleware",
-    }),
+    adapter: cloudflare({ imageService: "cloudflare" }),
 })
