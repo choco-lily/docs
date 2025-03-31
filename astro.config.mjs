@@ -93,7 +93,6 @@ export default defineConfig({
             ],
             customCss: ["./src/styles/custom.css"],
         }),
-        auth(),
     ],
 
     output: "server",

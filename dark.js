@@ -5,8 +5,6 @@ var data = fs.readFileSync(
     "utf-8",
 )
 
-console.log(data)
-
 var newValue = data.replace("false, value: 'd", "true, value: 'd")
 newValue = newValue.replace("true, value: 'a", "false, value: 'a")
 newValue = newValue.replace('value="auto"', 'value="dark"')
