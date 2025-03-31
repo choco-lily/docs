@@ -12,9 +12,6 @@ export default defineConfig({
                 ko: "쵸코릴리",
                 en: "chocolily",
             },
-            components: {
-                Search: "./src/components/starlight/Search.astro",
-            },
             locales: {
                 root: {
                     label: "한국어",
