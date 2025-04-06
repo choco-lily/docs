@@ -12,7 +12,6 @@ onload = () => {
     document.char.style.display = "none"
     document.char.style.width = "200px"
     document.char.style.height = "200px"
-    document.body.innerHTML += '<ins class="kakao_ad_area"style="display:none;"data-ad-unit="DAN-adfREtfFWxy50pGB"data-ad-width="300"data-ad-height="250"></ins>'
 }
 
 function charcter(name, on) {

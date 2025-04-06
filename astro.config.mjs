@@ -79,12 +79,14 @@ export default defineConfig({
                         async: true,
                         type: "text/partytown",
                     },
-                },{
+                },
+                {
                     tag: "script",
                     attrs: {
-                        src: "//t1.daumcdn.net/kas/static/ba.min.js",
+                        src: "https://t1.daumcdn.net/kas/static/ba.min.js",
                         async: true,
                         type: "text/partytown",
+                        charset: "utf-8",
                     },
                 },
                 {
