@@ -5,8 +5,6 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils"
 
 import cloudflare from "@astrojs/cloudflare"
 
-import partytown from "@astrojs/partytown"
-
 // https://astro.build/config
 export default defineConfig({
     integrations: [
@@ -69,6 +67,15 @@ export default defineConfig({
                         directory: "MapleStory",
                     },
                 },
+                {
+                    label: "사운드 볼텍스",
+                    translations: {
+                        en: "SOUND VOLTEX"
+                    },
+                    autogenerate: {
+                        directory: "SDVX"
+                    }
+                }
             ],
             head: [
                 {
@@ -77,7 +84,7 @@ export default defineConfig({
                         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2420658305303725",
                         crossorigin: "anonymous",
                         async: true,
-                        type: "text/partytown",
+                        type: "text/javascript",
                     },
                 },
                 {
@@ -85,7 +92,7 @@ export default defineConfig({
                     attrs: {
                         src: "https://t1.daumcdn.net/kas/static/ba.min.js",
                         async: true,
-                        type: "text/partytown",
+                        type: "text/javascript",
                         charset: "utf-8",
                     },
                 },
@@ -105,7 +112,6 @@ export default defineConfig({
             ],
             customCss: ["./src/styles/custom.css"],
         }),
-        partytown(),
     ],
 
     output: "server",
